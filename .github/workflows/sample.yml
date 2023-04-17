@@ -9,5 +9,5 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Use secret
-      run: echo ${{ secrets.XVG }}
+      run: echo ${{ secrets.SECRET_TOKENS3 }}
 

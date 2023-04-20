@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Register Artifact Custom Action
-              uses: roy-ca/register-artifact-action@dev
+              uses: roy-ca/register-artifact-action@main
               with:
                 devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
                 devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}

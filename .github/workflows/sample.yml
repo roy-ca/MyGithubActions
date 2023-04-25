@@ -16,6 +16,6 @@ jobs:
                 tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
                 context-github: ${{ toJSON(github) }}
                 job-name: 'Register Artifact'
-                artifacts: '[{"name": "com:customactiondemo1234royBasic1","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
+                artifacts: '[{"name": "com:customactiondemo1234royBasic12","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
 
 

@@ -6,16 +6,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Register Artifact Custom Action
-              uses: roy-ca/register-artifact-action@dev
+              uses: roy-ca/servicenow-devops-register-artifact@main
               with:
                 devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
                 devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
-                devops-security-token: ${{ secrets.SECRET_TOKENS4 }}
-                github-token: ${{ secrets.SECRET_TOKENS3 }}
+                devops-security-token: ${{ secrets.SECRET_TOKENS5 }}
                 instance-url: ${{ secrets.SN_INSTANCE_URL }}
                 tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
                 context-github: ${{ toJSON(github) }}
                 job-name: 'Register Artifact'
-                artifacts: '[{"name": "com:customactiondemo1234royBasic123","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
+                artifacts: '[{"name": "com:customactiondemo1234royBasicAuth","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
 
 

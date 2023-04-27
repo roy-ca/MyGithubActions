@@ -8,13 +8,13 @@ jobs:
             - name: Register Artifact Custom Action
               uses: roy-ca/servicenow-devops-register-artifact@main
               with:
-                devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER1 }}
-                devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD1 }}
-                devops-secret-token: ${{ secrets.SN_DEVOPS_SECRET_TOKEN }}
+                devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+                devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+                devops-secret-token: ${{ secrets.SN_DEVOPS_SECRET_TOKEN1 }}
                 instance-url: ${{ secrets.SN_INSTANCE_URL }}
                 tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
                 context-github: ${{ toJSON(github) }}
                 job-name: 'Register Artifact'
-                artifacts: '[{"name": "com:customactiondemo1234royBasicTokenTrialOne","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
+                artifacts: '[{"name": "com:customactiondemo1234royBasicTokenTrialTwo","version": "1.${{ github.run_number }}","semanticVersion": "1.${{ github.run_number }}.0","repositoryName": "${{ github.repository }}"}]'
 
 

@@ -8,9 +8,9 @@ jobs:
             - name: Register Artifact Custom Action
               uses: roy-ca/servicenow-devops-register-artifact@main
               with:
-                devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
-                devops-integration-user-password: ${{ secrets.SECRET_TOKENS }}
-                devops-secret-token: ${{ secrets.MYSECRET }}
+                devops-integration-user-name: ${{ secrets.XVG1234 }}
+                devops-integration-user-password: ${{ secrets.XVG123 }}
+                devops-secret-token: ${{ secrets.XVG12 }}
                 instance-url: ${{ secrets.SN_INSTANCE_URL }}
                 tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
                 context-github: ${{ toJSON(github) }}
